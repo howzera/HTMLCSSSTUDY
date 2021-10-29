@@ -1,0 +1,156 @@
+*{
+    margin:0 ;
+    padding:0 ;
+    box-sizing: border-box;
+    font-family: "montserrat", sans-serif;
+    
+}
+
+body{
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    background: #fff;
+    background-image: url(assents/WALL-0.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container{
+    max-width: 950px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.884);
+    margin: 0 20px;
+    padding: 40px 50px 40px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.content input{
+    display: none;
+    
+}
+
+.container .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #7f7f7f;
+    
+    
+}
+.container .content .list{
+    
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 20%;
+    margin-right: 50px;
+    border-radius: 5px;
+}
+
+.content .list label{
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    height: 60px;
+    font-family: "montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 12px;
+    line-height: 60px;
+    cursor: pointer;
+    padding-left: 15px;
+    color: #7f7f7f;
+    z-index: 12;
+}
+
+.content .list label:hover{
+    color: #04B2D9;
+    
+}
+
+.content .indicator{
+    position: absolute;
+    height: 60px;
+    width: 213px;
+    transition: all 0.4s ease;
+    background: #fff;
+    border: solid;
+    border-width: 2px;
+    border-color: #04B2D9;
+    border-right: solid 2px #fff;
+    
+}
+
+#empresa:checked ~ .list .empresa{
+    color: #04B2D9;
+}
+
+
+#missao:checked ~ .list .missao{
+    color: #04B2D9;
+}
+
+#visao:checked ~ .list .visao{
+    color: #04B2D9;
+}
+
+#valores:checked ~ .list .valores{
+    color: #04B2D9;
+}
+
+
+#empresa:checked ~ .list .indicator{
+    top: 0;
+}
+
+#missao:checked ~ .list .indicator{
+    top: 60px;
+}
+
+#visao:checked ~ .list .indicator{
+    top: 120px;
+}
+
+#valores:checked ~ .list .indicator{
+    top: 180px;
+}
+
+
+.content .text-content .text{
+    display: none;
+    
+}
+
+.content .text-content .empresa{
+    display: block;
+}
+
+#empresa:checked ~ .text-content .empresa,
+#missao:checked ~ .text-content .missao,
+#visao:checked ~ .text-content .visao,
+#valores:checked ~ .text-content .valores{
+    display: block;
+}
+
+#missao:checked ~ .text-content .empresa,
+#visao:checked ~ .text-content .empresa,
+#valores:checked ~ .text-content .empresa{
+    display: none;
+}
+
+
+.container .content .text-content{
+    box-sizing: content-box;
+    width: 80%;
+    max-width: 80%;
+    height: 236px;
+    border: solid;
+    border-width: 2px;
+    border-color: #04B2D9;       
+}
+
